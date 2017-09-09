@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<!--
+  Copyright (c) 2016, . All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>קלוריה - מחשבון קלוריות</title>
+
+    <link rel="icon" href="resources/images/favicon.png" type="image/x-icon" />
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="resources/styles/bootstrap.paper.css" />
+
+    <link rel="stylesheet" href="//cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.1/awesomplete.min.css" />
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.1/awesomplete.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="resources/styles/main.css" />
+
+    <script src="resources/scripts/login.js"></script>
+    <script src="resources/scripts/main.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">קלוריה</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">עמוד הבית</a></li>
+            <li><a href="calculator.html">מחשבון קלוריות</a></li>
+            <li class="active"><a href="#">כניסה / הרשמה למערכת</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav">
+
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <header class="login">
+        <h1>
+            כניסה
+        </h1>
+    </header>
+
+    <div class="container">
+        <div class="col-md-5">
+            <h3>כניסה למשתמשים רשומים</h3>
+            <div class="form-group">
+                <label for="email-input">דואר אלקטרוני</label>
+                <input type="email" class="form-control text-left" id="email-input" placeholder="you@address.com" />
+            </div>
+
+            <div class="form-group">
+                <label for="password-input">סיסמה</label>
+                <input type="password" class="form-control text-left" id="password-input" />
+            </div>
+
+            <div class="text-left">
+                <button class="btn btn-primary" id="login-button">כניסה למערכת</button>
+            </div>
+        </div>
+
+        <div class="col-md-5 col-md-offset-2">
+            <h3>אין לך משתמש? הרשם כעת</h3>
+            <div class="form-group">
+                <label for="email-registration-input">דואר אלקטרוני</label>
+                <input type="email" class="form-control text-left" id="email-registration-input" placeholder="you@address.com" />
+            </div>
+
+            <div class="form-group">
+                <label for="password-registration-input">סיסמה</label>
+                <input type="password" class="form-control text-left" id="password-registration-input" />
+            </div>
+
+            <div class="form-group">
+                <label for="repeat-password-registration-input">חזור שנית על הסיסמה</label>
+                <input type="password" class="form-control text-left" id="repeat-password-registration-input" />
+            </div>
+
+            <div class="form-group">
+                <label for="birthdate-registration-input">תאריך לידה</label>
+                <input type="text" class="form-control datePicker" id="birthdate-registration-input" />
+            </div>
+
+            <div class="form-group">
+                <label for="current-weight-registration-input">משקל נוכחי</label>
+                <input type="number" class="form-control" id="current-weight-registration-input" placeholder="(קילוגרמים)" />
+            </div>
+
+            <div class="form-group">
+                <label for="current-fat-percentage-registration-input">אחוז שומן נוכחי</label>
+                <input type="number" class="form-control" id="current-fat-percentage-registration-input" />
+            </div>
+
+            <div class="text-left">
+                <button class="btn btn-primary" id="registration-button">הרשמה</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            כל הזכויות שמורות © 2016
+        </div>
+    </footer>
+
+</body>
+</html>

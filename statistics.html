@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<!--
+  Copyright (c) 2016, . All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>קלוריה - מחשבון קלוריות</title>
+
+    <link rel="icon" href="resources/images/favicon.png" type="image/x-icon" />
+
+    <script src="resources/scripts/jquery.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="resources/styles/bootstrap.paper.css" />
+
+    <link rel="stylesheet" href="//cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.1/awesomplete.min.css" />
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.1/awesomplete.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.12/cr-1.3.2/r-2.1.0/rr-1.1.2/datatables.css"/>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.12/cr-1.3.2/r-2.1.0/rr-1.1.2/datatables.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.css">
+
+    <link rel="stylesheet" href="resources/styles/tipped.css" />
+    <script src="resources/scripts/tipped.js"></script>
+
+    <link rel="stylesheet" href="resources/styles/main.css" />
+
+    <script src="resources/scripts/statistics.js"></script>
+    <script src="resources/scripts/main.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">קלוריה</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">עמוד הבית</a></li>
+            <li><a href="calculator.html">מחשבון קלוריות</a></li>
+            <li class="hide-before-login"><a href="personal.html">נתונים אישיים</a></li>
+            <li class="hide-before-login active"><a href="#">סטטיסטיקה</a></li>
+            <li class="hide-before-login"><a href="#" id="logout-button">התנתקות</a></li>
+            <li class="hide-after-login"><a href="login.html">כניסה / הרשמה למערכת</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <header class="statistics">
+        <h1>
+            סטטיסטיקה
+        </h1>
+    </header>
+
+    <div class="container">
+        <h3>גרף דינאמי</h3>
+        <div class="row vcenter">
+            <div class="col-md-10">
+                <canvas id="voedselgroepe-chart"></canvas>
+            </div>
+            <div class="col-md-2" id="legends">
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-3 col-md-offset-1">
+                <label for="start-date-input">מתאריך</label>
+                <input class="form-control datePicker" id="start-date-input" type="text" />
+            </div>
+
+            <div class="col-md-3">
+                <label for="end-date-input">עד תאריך</label>
+                <input class="form-control datePicker" id="end-date-input" type="text" />
+            </div>
+
+            <div class="col-md-2">
+                <label for="end-date-input">תדירות</label>
+                <select class="form-control" id="frequency-dropdown">
+                    <option value="0">יומית</option>
+                    <option value="1">שבועית</option>
+                    <option value="2">חודשית</option>
+                    <option value="3">שנתית</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            כל הזכויות שמורות © 2016
+        </div>
+    </footer>
+
+</body>
+</html>
